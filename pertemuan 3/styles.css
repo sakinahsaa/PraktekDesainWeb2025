@@ -1,0 +1,75 @@
+/* Styling untuk header */
+.judul, .subjudul {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container agar tabel tidak keluar layar */
+.table-container {
+    width: 100%;
+    max-width: 800px;
+    overflow-x: auto;
+}
+
+/* Styling untuk tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Styling untuk sel tabel */
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling untuk header tabel */
+th {
+    background: #1565c0;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Mengatur ukuran kolom */
+th.narrow {
+    width: 40px;
+}
+th.medium {
+    width: 200px;
+}
+th.wide {
+    width: 250px;
+}
+
+/* Warna baris bergantian */
+tr:nth-child(odd) {
+    background: #f3f4f5;
+}
+tr:nth-child(even) {
+    background: #e3f2fd;
+}
+
+/* Efek hover tetap membesar */
+td:hover {
+    background: #ffab91;
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #000;
+}
