@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Wali Murid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Data Wali Murid</h2>
+        <form action="terimakasih.html">
+            <label for="nama_wali">Nama Orang Tua / Wali</label>
+            <input type="text" id="nama_wali" required>
+            
+            <label for="pendidikan_wali">Pendidikan Terakhir</label>
+            <select id="pendidikan_wali" required>
+                <option value="">Pilih</option>
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA">SMA</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Sarjana">Sarjana</option>
+            </select>
+            
+            <label for="pekerjaan_wali">Pekerjaan Orang Tua / Wali</label>
+            <select id="pekerjaan_wali" required>
+                <option value="">Pilih</option>
+                <option value="PNS">PNS</option>
+                <option value="Polisi">Polisi</option>
+                <option value="Dokter">Dokter</option>
+                <option value="Karyawan Swasta">Karyawan Swasta</option>
+                <option value="Wiraswasta">Wiraswasta</option>
+                <option value="Buruh Harian">Buruh Harian</option>
+            </select>
+            
+            <label for="alamat_wali">Alamat</label>
+            <textarea id="alamat_wali" rows="3" required></textarea>
+            
+            <label for="telpon">No. Telpon</label>
+            <input type="text" id="telpon" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            
+            <button type="submit" class="small-button">Selesai</button>
+        </form>
+    </div>
+</body>
+</html>
