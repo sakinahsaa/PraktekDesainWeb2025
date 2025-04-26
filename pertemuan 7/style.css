@@ -1,0 +1,267 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global */
+body {
+    font: normal bold 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: fadeIn 1s ease-out;
+}
+
+nav ul {
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    background: url('rumah makan.jpg') no-repeat center/cover;
+    height: 65vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    animation: fadeInUp 1.5s ease-out 0.5s;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    animation: fadeInUp 1.5s ease-out 1s;
+}
+
+/* Menu */
+.menu {
+    padding: 60px 0;
+    animation: fadeIn 2s ease-out;
+}
+
+.menu h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2.3rem;
+}
+
+.menu-grid {
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-item {
+    background: white;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    animation: fadeInUp 2s ease-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.menu-item img:hover {
+    transform: scale(1.1);
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.menu-item p {
+    color: #e67e22;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Tentang */
+.tentang {
+    padding: 60px 0;
+    background-color:  #2c3e50;
+    animation: fadeInUp 2s ease-out 0.5s;
+}
+
+.tentang-text {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.tentang-text h2 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #e67e22;
+}
+
+.tentang-text p {
+    font-size: 1.2rem;
+    color: #f4f4f4;
+}
+
+/* Kontak */
+.kontak {
+    padding: 60px 0;
+    background: #f4f4f4;
+    text-align: center;
+    animation: fadeInUp 2s ease-out 0.5s;
+}
+
+.kontak h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+.kontak-grid {
+    gap: 30px;
+    justify-content: center;
+}
+
+.kontak-item {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    animation: fadeInUp 2s ease-out 0.8s;
+}
+
+.kontak-item h3 {
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.kontak-item p {
+    color: #2c3e50;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-grid, .kontak-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 70vh;
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
